@@ -1,0 +1,26 @@
+.products {
+    @apply basis-8/12 grid grid-cols-4 gap-4 p-4 justify-items-center;
+}
+
+.card {
+    @apply flex flex-col gap-2 bg-gray-200 p-4 rounded-xl shadow-lg
+    text-lg tracking-wide font-roboto w-72;
+}
+
+.img {
+    @apply w-full;
+}
+
+.category {
+    @apply flex justify-between;
+}
+
+.page {
+    @apply mt-4 flex gap-4 content-center justify-center text-2xl text-gray-200
+    font-semibold;
+
+    .btn {
+        @apply bg-teal-500 py-2 px-3 rounded-xl hover:bg-teal-700 transition ease-in-out duration-300
+        cursor-pointer hover:shadow-lg;
+    }
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "title": "Gomu Gomu no Mi (Rubber Fruit)",
+    "price": 500000,
+    "description": "The legendary Devil Fruit that grants its user the ability to stretch like rubber. Beware of losing the ability to swim forever!",
+    "category": "Devil Fruit",
+    "image": "public/images/gomu.png",
+    "rating": { "rate": 5, "count": 50 }
+  },
+  {
+    "id": 2,
+    "title": "Yoru – Dracule Mihawk's Black Blade",
+    "price": 1200000,
+    "description": "The supreme-grade black sword wielded by Dracule Mihawk, the World's Strongest Swordsman. Known for its indestructible sharpness.",
+    "category": "Sword",
+    "image": "https://fakestoreapi.com/img/yoru_blade.png",
+    "rating": { "rate": 4.9, "count": 15 }
+  },
+  {
+    "id": 3,
+    "title": "Mera Mera no Mi (Flame Fruit)",
+    "price": 700000,
+    "description": "This rare Devil Fruit grants its user the power to create, control, and become fire. A favorite among fighters who like to turn up the heat!",
+    "category": "Devil Fruit",
+    "image": "https://fakestoreapi.com/img/mera_mera_no_mi.png",
+    "rating": { "rate": 4.7, "count": 35 }
+  },
+  {
+    "id": 4,
+    "title": "Shusui – Roronoa Zoro's Cursed Sword",
+    "price": 500000,
+    "description": "A legendary cursed sword, formerly wielded by the samurai Ryuma. Grants immense power but can be dangerous to the unworthy.",
+    "category": "Sword",
+    "image": "https://fakestoreapi.com/img/shusui.png",
+    "rating": { "rate": 4.8, "count": 25 }
+  },
+  {
+    "id": 5,
+    "title": "Kairoseki (Sea-Prism Stone) Handcuffs",
+    "price": 25000,
+    "description": "Handcuffs made of Kairoseki to nullify Devil Fruit powers. Essential for any pirate looking to capture a powerful opponent.",
+    "category": "Equipment",
+    "image": "https://fakestoreapi.com/img/kairoseki_handcuffs.png",
+    "rating": { "rate": 4.5, "count": 150 }
+  },
+  {
+    "id": 6,
+    "title": "Hito Hito no Mi (Human-Human Fruit)",
+    "price": 350000,
+    "description": "A unique Devil Fruit that grants the ability to think, feel, and act like a human. Perfect for any animal looking to gain sentience!",
+    "category": "Devil Fruit",
+    "image": "https://fakestoreapi.com/img/hito_hito_no_mi.png",
+    "rating": { "rate": 4.3, "count": 10 }
+  },
+  {
+    "id": 7,
+    "title": "Clima-Tact – Nami's Weather Staff",
+    "price": 20000,
+    "description": "The ultimate tool for manipulating weather, developed by Usopp. Perfect for causing storms, lightning, or a cool breeze.",
+    "category": "Weapon",
+    "image": "https://fakestoreapi.com/img/clima_tact.png",
+    "rating": { "rate": 4.6, "count": 60 }
+  },
+  {
+    "id": 8,
+    "title": "Yubashiri – Zoro's Trusty Sword",
+    "price": 150000,
+    "description": "One of the 50 skillful-grade swords. Although destroyed, replicas of Yubashiri are still sought by avid swordsmen.",
+    "category": "Sword",
+    "image": "https://fakestoreapi.com/img/yubashiri.png",
+    "rating": { "rate": 4.4, "count": 55 }
+  },
+  {
+    "id": 9,
+    "title": "Poseidon Ancient Weapon Blueprint",
+    "price": 3000000,
+    "description": "The blueprint to the ancient weapon Poseidon, rumored to control the sea kings. Only for the ambitious and daring!",
+    "category": "Artifact",
+    "image": "https://fakestoreapi.com/img/poseidon_blueprint.png",
+    "rating": { "rate": 5, "count": 5 }
+  },
+  {
+    "id": 10,
+    "title": "Kikoku – Trafalgar Law's Sword",
+    "price": 800000,
+    "description": "A powerful cursed sword wielded by the Surgeon of Death, Trafalgar Law. Its powers make it deadly in the right hands.",
+    "category": "Sword",
+    "image": "https://fakestoreapi.com/img/kikoku.png",
+    "rating": { "rate": 4.7, "count": 20 }
+  },
+  {
+    "id": 11,
+    "title": "Kairosuke (Sea Stone) Bullets",
+    "price": 10000,
+    "description": "Bullets made from Kairosuke, perfect for immobilizing Devil Fruit users. Often used by the Marines.",
+    "category": "Ammunition",
+    "image": "https://fakestoreapi.com/img/kairosuke_bullets.png",
+    "rating": { "rate": 4.5, "count": 120 }
+  },
+  {
+    "id": 12,
+    "title": "Poneglyph Replica Tablet",
+    "price": 150000,
+    "description": "A replica of the ancient Poneglyph tablets. A beautiful collector's item for historians and adventurers alike.",
+    "category": "Artifact",
+    "image": "https://fakestoreapi.com/img/poneglyph_tablet.png",
+    "rating": { "rate": 4.9, "count": 30 }
+  },
+  {
+    "id": 13,
+    "title": "Sandai Kitetsu – Zoro's Cursed Sword",
+    "price": 300000,
+    "description": "One of the cursed swords wielded by Zoro. Known to bring misfortune to its user, but incredibly powerful.",
+    "category": "Sword",
+    "image": "https://fakestoreapi.com/img/sandai_kitetsu.png",
+    "rating": { "rate": 4.3, "count": 45 }
+  },
+  {
+    "id": 14,
+    "title": "Dials from Skypiea (Assorted Set)",
+    "price": 6000,
+    "description": "A set of dials with various abilities: Flame Dial, Impact Dial, and Breath Dial. Essential for any adventurer visiting Skypiea.",
+    "category": "Tool",
+    "image": "https://fakestoreapi.com/img/skypiea_dials.png",
+    "rating": { "rate": 4.7, "count": 100 }
+  },
+  {
+    "id": 15,
+    "title": "Hana Hana no Mi (Flower Fruit)",
+    "price": 600000,
+    "description": "This Devil Fruit allows the user to sprout additional limbs anywhere, making it perfect for multitasking in combat.",
+    "category": "Devil Fruit",
+    "image": "https://fakestoreapi.com/img/hana_hana_no_mi.png",
+    "rating": { "rate": 4.6, "count": 25 }
+  },
+  {
+    "id": 16,
+    "title": "Baratie Specialty Seafood Platter",
+    "price": 150,
+    "description": "A luxurious seafood platter from the Baratie, known for its gourmet cuisine. Perfect for any pirate's last meal before a journey.",
+    "category": "Food",
+    "image": "https://fakestoreapi.com/img/baratie_seafood.png",
+    "rating": { "rate": 4.9, "count": 200 }
+  },
+  {
+    "id": 17,
+    "title": "Demon Bamboo Vergo's Bamboo Staff",
+    "price": 18000,
+    "description": "A durable bamboo staff used by Vergo. A reliable and simple weapon that packs a punch.",
+    "category": "Weapon",
+    "image": "https://fakestoreapi.com/img/bamboo_staff.png",
+    "rating": { "rate": 4.4, "count": 75 }
+  },
+  {
+    "id": 18,
+    "title": "Usopp's Kabuto Slingshot",
+    "price": 25000,
+    "description": "The unique slingshot crafted by Usopp, allowing for various ammunition types and long-range attacks.",
+    "category": "Weapon",
+    "image": "https://fakestoreapi.com/img/usopp_kabuto.png",
+    "rating": { "rate": 4.8, "count": 85 }
+  },
+  {
+    "id": 19,
+    "title": "Pirate Jolly Roger Flag (Customizable)",
+    "price": 500,
+    "description": "Show off your crew's spirit with a customizable Jolly Roger flag. Perfect for any ship's mast!",
+    "category": "Accessory",
+    "image": "https://fakestoreapi.com/img/jolly_roger.png",
+    "rating": { "rate": 4.7, "count": 300 }
+  },
+  {
+    "id": 20,
+    "title": "Log Pose – Essential Navigational Tool",
+    "price": 10000,
+    "description": "A Log Pose, essential for navigating the Grand Line. Attunes to the island's magnetic field, guiding pirates on their journey.",
+    "category": "Navigation",
+    "image": "https://fakestoreapi.com/img/log_pose.png",
+    "rating": { "rate": 4.9, "count": 180 }
+  }
+]

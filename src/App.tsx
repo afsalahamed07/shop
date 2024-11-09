@@ -1,11 +1,16 @@
 import React from "react";
 import Navbar from "./components/navbar/NavBar";
 
+import "./App.css";
+import Footer from "./components/footer/Footer";
+import { Outlet } from "react-router-dom";
+
 const App: React.FC = () => {
   return (
     <div className="app">
       <Navbar />
-      <div className="main"></div>
+      <Outlet />
+      <Footer />
     </div>
   );
 };

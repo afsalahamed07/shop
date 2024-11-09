@@ -1,0 +1,7 @@
+.home {
+    @apply grow flex flex-col content-center justify-center;
+
+    p {
+        @apply text-center font-river font-semibold text-gray-300 tracking-wider text-5xl;
+    }
+}
