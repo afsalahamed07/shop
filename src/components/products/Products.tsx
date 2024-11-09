@@ -7,7 +7,7 @@ import "./Products.css";
 const Products: React.FC = () => {
   const [page, setPage] = useState<number>(0);
   const products: Product[] = Object.values(productsList);
-  const pages: number = Math.ceil(products.length / 4);
+  const pages: number = Math.ceil(products.length / 3);
 
   function previouse() {
     if (page != 0) setPage((prev) => prev - 1);
@@ -18,9 +18,9 @@ const Products: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className="products-parent">
       <div className="products">
-        {products.slice(page * 4, page * 4 + 4).map((product) => (
+        {products.slice(page * 3, page * 3 + 3).map((product) => (
           <Card
             key={product.id}
             id={product.id}
@@ -29,6 +29,7 @@ const Products: React.FC = () => {
             category={product.category}
             rating={product.rating}
             image={product.image}
+            description={product.description}
           />
         ))}
       </div>

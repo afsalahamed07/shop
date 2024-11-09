@@ -14,7 +14,7 @@
     "price": 1200000,
     "description": "The supreme-grade black sword wielded by Dracule Mihawk, the World's Strongest Swordsman. Known for its indestructible sharpness.",
     "category": "Sword",
-    "image": "https://fakestoreapi.com/img/yoru_blade.png",
+    "image": "public/images/yoru.webp",
     "rating": { "rate": 4.9, "count": 15 }
   },
   {
