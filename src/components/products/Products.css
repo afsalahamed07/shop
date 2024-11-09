@@ -3,11 +3,11 @@ p {
 }
 
 .products-parent {
-    @apply basis-10/12;
+    @apply basis-10/12 flex flex-col content-center justify-center;
 }
 
 .products {
-    @apply grid grid-rows-3 gap-4 p-4 justify-items-center;
+    @apply grid gap-4 p-4 justify-items-center;
 }
 
 .card {
