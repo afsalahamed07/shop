@@ -14,7 +14,7 @@
     "price": 1200000,
     "description": "The supreme-grade black sword wielded by Dracule Mihawk, the World's Strongest Swordsman. Known for its indestructible sharpness.",
     "category": "Sword",
-    "image": "public/images/yoru.webp",
+    "image": "public/images/yoru.png",
     "rating": { "rate": 4.9, "count": 15 }
   },
   {
@@ -23,7 +23,7 @@
     "price": 700000,
     "description": "This rare Devil Fruit grants its user the power to create, control, and become fire. A favorite among fighters who like to turn up the heat!",
     "category": "Devil Fruit",
-    "image": "https://fakestoreapi.com/img/mera_mera_no_mi.png",
+    "image": "public/images/mera.png",
     "rating": { "rate": 4.7, "count": 35 }
   },
   {
@@ -32,7 +32,7 @@
     "price": 500000,
     "description": "A legendary cursed sword, formerly wielded by the samurai Ryuma. Grants immense power but can be dangerous to the unworthy.",
     "category": "Sword",
-    "image": "https://fakestoreapi.com/img/shusui.png",
+    "image": "public/images/shusui.jpg",
     "rating": { "rate": 4.8, "count": 25 }
   },
   {
@@ -147,7 +147,7 @@
     "id": 17,
     "title": "Demon Bamboo Vergo's Bamboo Staff",
     "price": 18000,
-    "description": "A durable bamboo staff used by Vergo. A reliable and simple weapon that packs a punch.",
+    "description": "A durable bamboo staff used by Vergo. A reliable and simple weapon that packs a punch. Something to stand on",
     "category": "Weapon",
     "image": "https://fakestoreapi.com/img/bamboo_staff.png",
     "rating": { "rate": 4.4, "count": 75 }

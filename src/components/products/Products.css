@@ -11,15 +11,15 @@ p {
 }
 
 .card {
-    @apply flex gap-8 border-solid border-2 p-4 border-black rounded-xl
+    @apply flex gap-4 border-solid border-2 p-4 border-black rounded-xl
     text-lg font-roboto;
 }
 
 .img {
-    @apply w-56;
+    @apply w-56 h-56 flex justify-center content-center p-2;
 
     img {
-        @apply w-full h-full rounded-lg;
+        @apply w-full h-full rounded-lg object-contain;
     }
 }
 
