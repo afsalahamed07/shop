@@ -21,12 +21,16 @@ const Card: React.FC<Product> = ({
           <p>{title}</p>
         </div>
         <div className="price">
+          <img src="public/images/berry.png" />
           <p>{price}</p>
         </div>
         <div className="description">{description}</div>
         <div className="category">
           <p>{category}</p>
           <p>{rating.rate}</p>
+        </div>
+        <div className="btn">
+          <button>Add to Cart</button>
         </div>
       </div>
     </div>

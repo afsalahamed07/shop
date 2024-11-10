@@ -7,21 +7,17 @@ const Navbar: React.FC = () => {
   return (
     <div className="navbar">
       <div className="logo">
-        <li>
-          <Link to="/">Shop</Link>
-        </li>
+        <Link to="/">
+          <li>Shop</li>
+        </Link>
       </div>
       <div className="links">
-        <div>
-          <li>
-            <Link to="products">Products</Link>
-          </li>
-        </div>
-        <div>
-          <li>
-            <Link to="cart">cart</Link>
-          </li>
-        </div>
+        <Link to="products">
+          <li>Products</li>
+        </Link>
+        <Link to="cart">
+          <li>cart</li>
+        </Link>
       </div>
     </div>
   );

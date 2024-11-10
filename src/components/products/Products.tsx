@@ -7,6 +7,7 @@ import "./Products.css";
 const Products: React.FC = () => {
   const [page, setPage] = useState<number>(0);
   const [productsPerPage, setProductsPerPage] = useState<number>(2);
+  const [cart, setCart] = useState<Product | null>(null);
   const products: Product[] = Object.values(productsList);
   const pages: number = Math.ceil(products.length / productsPerPage);
 
