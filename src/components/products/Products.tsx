@@ -3,6 +3,7 @@ import productsList from "../../assets/products.json";
 import Product from "./Product";
 import Card from "./Card";
 import "./Products.css";
+import { fetchBooks, sanitiseBook } from "../../infra/book-api";
 
 const Products: React.FC = () => {
   const [page, setPage] = useState<number>(0);
@@ -32,6 +33,13 @@ const Products: React.FC = () => {
   useEffect(() => {
     handleResize();
     window.addEventListener("resize", handleResize);
+
+    async function apiCall() {
+      const data = await fetchBooks();
+      const items = sanitiseBook(data)
+    }
+
+    apiCall()
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);

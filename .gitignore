@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 README.md
 package-lock.json
+src/assets/api.yaml
+src/infra/api.yaml
+src/infra/api.json
