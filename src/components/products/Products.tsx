@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import productsList from "../../assets/products.json";
 import Product from "./Product";
 import Card from "./Card";
 import "./Products.css";
 import { fetchBooks, sanitiseBook } from "../../infra/book-api";
+import Item from "./item";
 
 const Products: React.FC = () => {
   const [page, setPage] = useState<number>(0);
   const [productsPerPage, setProductsPerPage] = useState<number>(2);
   const [cart, setCart] = useState<Product | null>(null);
   const products: Product[] = Object.values(productsList);
+  const [items, setItems] = useState<Item[] | null>(null);
   const pages: number = Math.ceil(products.length / productsPerPage);
 
   function previouse() {
@@ -36,10 +38,10 @@ const Products: React.FC = () => {
 
     async function apiCall() {
       const data = await fetchBooks();
-      const items = sanitiseBook(data)
+      setItems(sanitiseBook(data));
     }
 
-    apiCall()
+    apiCall();
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -47,21 +49,23 @@ const Products: React.FC = () => {
   return (
     <div className="products-parent">
       <div className={`products grid-rows-${productsPerPage}`}>
-        {products
+        {items && items
           .slice(
             page * productsPerPage,
             page * productsPerPage + productsPerPage,
           )
-          .map((product) => (
+          .map((item) => (
             <Card
-              key={product.id}
-              id={product.id}
-              title={product.title}
-              price={product.price}
-              category={product.category}
-              rating={product.rating}
-              image={product.image}
-              description={product.description}
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              pageCount={item.pageCount}
+              catagories={item.catagories}
+              thumbnail={item.thumbnail}
+              publishedDate={item.publishedDate}
+              authors={item.authors}
+              language={item.language}
+              publisher={item.publisher}
             />
           ))}
       </div>

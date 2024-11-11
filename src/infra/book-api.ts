@@ -1,21 +1,10 @@
 import api from "./api.json";
+import Item from "../components/products/item";
 
 type Data = {
   kind: string;
   totalItems: number;
   items: object[];
-}
-
-type Item = {
-  id: string;
-  authors: string[];
-  catagories: string[];
-  thumbnail: string;
-  language: string;
-  pageCount: number;
-  publishedDate: Date;
-  publisher: string;
-  title: string
 }
 
 

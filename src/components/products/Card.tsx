@@ -1,20 +1,22 @@
 import React from "react";
-import Product from "./Product";
 import "./Products.css";
+import Item from "./item";
 
-const Card: React.FC<Product> = ({
+const Card: React.FC<Item> = ({
   id,
   title,
-  price,
-  category,
-  image,
-  rating,
-  description,
+  authors,
+  catagories,
+  thumbnail,
+  language,
+  pageCount,
+  publishedDate,
+  publisher,
 }) => {
   return (
     <div className="card">
       <div className="img">
-        <img src={image} />
+        <img src={thumbnail} />
       </div>
       <div className="desc">
         <div className="title">
@@ -22,12 +24,12 @@ const Card: React.FC<Product> = ({
         </div>
         <div className="price">
           <img src="public/images/berry.png" />
-          <p>{price}</p>
+          <p>{pageCount}</p>
         </div>
-        <div className="description">{description}</div>
+        <div className="description">No des</div>
         <div className="category">
-          <p>{category}</p>
-          <p>{rating.rate}</p>
+          <p>No Des</p>
+          <p>No Rate</p>
         </div>
         <div className="btn">
           <button>Add to Cart</button>
