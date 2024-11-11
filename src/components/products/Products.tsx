@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
-import productsList from "../../assets/products.json";
+import React, { useEffect, useState } from "react";
 import Product from "./Product";
 import Card from "./Card";
 import "./Products.css";
@@ -8,11 +7,9 @@ import Item from "./item";
 
 const Products: React.FC = () => {
   const [page, setPage] = useState<number>(0);
-  const [productsPerPage, setProductsPerPage] = useState<number>(2);
   const [cart, setCart] = useState<Product | null>(null);
-  const products: Product[] = Object.values(productsList);
   const [items, setItems] = useState<Item[] | null>(null);
-  const pages: number = Math.ceil(products.length / productsPerPage);
+  const pages: number = items ? Math.ceil(items.length / 5) : 0;
 
   function previouse() {
     if (page != 0) setPage((prev) => prev - 1);
@@ -22,37 +19,22 @@ const Products: React.FC = () => {
     if (page < pages - 1) setPage((prev) => prev + 1);
   }
 
-  function handleResize() {
-    if (window.innerHeight >= 1300) {
-      setProductsPerPage(4);
-    } else if (window.innerHeight >= 900) {
-      setProductsPerPage(3);
-    } else {
-      setProductsPerPage(2);
-    }
-  }
-
   useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
     async function apiCall() {
       const data = await fetchBooks();
       setItems(sanitiseBook(data));
     }
 
     apiCall();
-
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <div className="products-parent">
-      <div className={`products grid-rows-${productsPerPage}`}>
+      <div className={`products grid-rows-5`}>
         {items && items
           .slice(
-            page * productsPerPage,
-            page * productsPerPage + productsPerPage,
+            page * 5,
+            page * 5 + 5
           )
           .map((item) => (
             <Card

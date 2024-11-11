@@ -15,21 +15,21 @@ const Card: React.FC<Item> = ({
 }) => {
   return (
     <div className="card">
-      <div className="img">
+      {/* left */}
+      <div className="left">
         <img src={thumbnail} />
       </div>
-      <div className="desc">
+
+      {/* right */}
+      <div className="right">
         <div className="title">
           <p>{title}</p>
         </div>
-        <div className="price">
-          <img src="public/images/berry.png" />
-          <p>{pageCount}</p>
+        <div className="author">
+          <p>by: {...authors}</p>
         </div>
-        <div className="description">No des</div>
         <div className="category">
-          <p>No Des</p>
-          <p>No Rate</p>
+          <p>{...catagories}</p>
         </div>
         <div className="btn">
           <button>Add to Cart</button>
