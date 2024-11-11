@@ -2,19 +2,36 @@ import React from "react";
 import "./Products.css";
 import Item from "./item";
 
+type CardProp = {
+  item: Item;
+  addToCart: (item: Item) => void;
+}
+
 //TODO: Implement rating
-const Card: React.FC<Item> = ({
-  id,
-  title,
-  authors,
-  catagories,
-  thumbnail,
-  language,
-  pageCount,
-  publishedDate,
-  publisher,
+const Card: React.FC<CardProp> = ({
+  item,
+  addToCart
 }) => {
-  return (
+  // destructuring item
+  const {
+    id,
+    title,
+    authors,
+    catagories,
+    thumbnail,
+    language,
+    pageCount,
+    publishedDate,
+    publisher,
+  } = item;
+
+
+  // TODO: like to do some fancy fuction return. which i forgot the name.
+  function handButtonClick() {
+    addToCart(item)
+  }
+
+  ; return (
     <div className="card">
       {/* left */}
       <div className="left">
@@ -41,7 +58,7 @@ const Card: React.FC<Item> = ({
           </div>
         </div>
         <div className="btn">
-          <button>Add to Cart</button>
+          <button onClick={handButtonClick}>Add to Cart</button>
         </div>
       </div>
     </div>

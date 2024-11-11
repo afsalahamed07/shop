@@ -9,7 +9,7 @@ import Item from "./item";
 
 const Products: React.FC = () => {
   const [page, setPage] = useState<number>(0);
-  const [cart, setCart] = useState<Product | null>(null); //TODO: implement the cart logic
+  const [cart, setCart] = useState<Item[] | null>(null); //TODO: implement the cart logic
   const [items, setItems] = useState<Item[] | null>(null);
   const pages: number = items ? Math.ceil(items.length / 5) : 0;
 
@@ -19,6 +19,17 @@ const Products: React.FC = () => {
 
   function next() {
     if (page < pages - 1) setPage((prev) => prev + 1);
+  }
+
+  function addToCart(item: Item) {
+    // TODO: Have to prevent duplicates
+    setCart((prev) => {
+      const clone = prev ? [...prev] : [];
+      clone.push(item);
+      return clone;
+    })
+
+    console.log(cart);
   }
 
   useEffect(() => {
@@ -40,19 +51,12 @@ const Products: React.FC = () => {
           )
           .map((item) => (
             <Card
-              key={item.id}
-              id={item.id}
-              title={item.title}
-              pageCount={item.pageCount}
-              catagories={item.catagories}
-              thumbnail={item.thumbnail}
-              publishedDate={item.publishedDate}
-              authors={item.authors}
-              language={item.language}
-              publisher={item.publisher}
+              item={item}
+              addToCart={addToCart}
             />
           ))}
       </div>
+      {/* NOTE: this looks ugly as fuck */}
       <div className="page">
         <div className="btn" onClick={previouse}>
           &lt;
