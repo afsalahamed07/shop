@@ -5,7 +5,7 @@ type Item = {
   thumbnail: string;
   language: string;
   pageCount: number;
-  publishedDate: Date;
+  publishedDate: string;
   publisher: string;
   title: string
 }

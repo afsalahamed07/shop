@@ -5,9 +5,11 @@ import "./Products.css";
 import { fetchBooks, sanitiseBook } from "../../infra/book-api";
 import Item from "./item";
 
+// NOTE: may be i could make this about programming books
+
 const Products: React.FC = () => {
   const [page, setPage] = useState<number>(0);
-  const [cart, setCart] = useState<Product | null>(null);
+  const [cart, setCart] = useState<Product | null>(null); //TODO: implement the cart logic
   const [items, setItems] = useState<Item[] | null>(null);
   const pages: number = items ? Math.ceil(items.length / 5) : 0;
 

@@ -35,6 +35,7 @@ function sanitiseBook(data: any) {
     sanItem.publisher = volumeInfo.publisher || "Unknown Publisher";
     sanItem.thumbnail = volumeInfo.imageLinks?.thumbnail || "default-thumbnail-url";
     sanItem.catagories = volumeInfo.categories
+    sanItem.publishedDate = volumeInfo.publishedDate
 
     return sanItem;
   });

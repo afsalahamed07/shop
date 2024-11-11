@@ -2,6 +2,7 @@ import React from "react";
 import "./Products.css";
 import Item from "./item";
 
+//TODO: Implement rating
 const Card: React.FC<Item> = ({
   id,
   title,
@@ -22,14 +23,22 @@ const Card: React.FC<Item> = ({
 
       {/* right */}
       <div className="right">
-        <div className="title">
-          <p>{title}</p>
-        </div>
-        <div className="author">
-          <p>by: {...authors}</p>
-        </div>
-        <div className="category">
-          <p>{...catagories}</p>
+        <div>
+          <div className="title">
+            <p>{title}</p>
+          </div>
+          <div className="flex gap-4">
+            <div className="subtext">
+              <p>by: {...authors}</p>
+            </div>
+            <div className="subtext">|</div>
+            <div className="subtext">
+              <p>{publishedDate}</p>
+            </div>
+          </div>
+          <div className="category mt-2">
+            <p>{...catagories}</p>
+          </div>
         </div>
         <div className="btn">
           <button>Add to Cart</button>
