@@ -16,7 +16,7 @@
 }
 
 .card {
-    @apply flex gap-5 py-4 px-6 text-lg font-roboto w-full;
+    @apply flex gap-8 py-4 text-lg font-roboto w-full;
 }
 
 .left {

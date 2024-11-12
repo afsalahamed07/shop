@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
-import Product from "./Product";
 import Card from "./Card";
 import "./Products.css";
 import { fetchBooks, sanitiseBook } from "../../infra/book-api";
 import Item from "./item";
+import { useOutletContext } from "react-router-dom";
+import { useCart } from "../../App";
 
+// NOTE: here the products means books. might change the name in future
 // NOTE: may be i could make this about programming books
-
 const Products: React.FC = () => {
   const [page, setPage] = useState<number>(0);
-  const [cart, setCart] = useState<Item[] | null>(null); //TODO: implement the cart logic
   const [items, setItems] = useState<Item[] | null>(null);
   const pages: number = items ? Math.ceil(items.length / 5) : 0;
+  const { addToCart } = useCart();
 
   function previouse() {
     if (page != 0) setPage((prev) => prev - 1);
@@ -21,16 +22,6 @@ const Products: React.FC = () => {
     if (page < pages - 1) setPage((prev) => prev + 1);
   }
 
-  function addToCart(item: Item) {
-    // TODO: Have to prevent duplicates
-    setCart((prev) => {
-      const clone = prev ? [...prev] : [];
-      clone.push(item);
-      return clone;
-    })
-
-    console.log(cart);
-  }
 
   useEffect(() => {
     async function apiCall() {
@@ -51,6 +42,7 @@ const Products: React.FC = () => {
           )
           .map((item) => (
             <Card
+              key={item.id}
               item={item}
               addToCart={addToCart}
             />

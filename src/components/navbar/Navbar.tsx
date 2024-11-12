@@ -13,10 +13,10 @@ const Navbar: React.FC = () => {
       </div>
       <div className="links">
         <Link to="products">
-          <li>Products</li>
+          <li>Books</li>
         </Link>
         <Link to="cart">
-          <li>cart</li>
+          <li>Cart</li>
         </Link>
       </div>
     </div>

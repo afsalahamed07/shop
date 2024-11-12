@@ -10,7 +10,7 @@ type Data = {
 
 async function fetchBooks() {
   const responnse =
-    await fetch(`https://www.googleapis.com/books/v1/volumes?q=search+terms&key=${api.api}
+    await fetch(`https://www.googleapis.com/books/v1/volumes?q=subject:computers&maxResults=20&key=${api.api}
 `);
   const data: Promise<Data> = await responnse.json();
   console.log(data);

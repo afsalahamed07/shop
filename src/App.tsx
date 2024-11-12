@@ -1,18 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/navbar/NavBar";
 
 import "./App.css";
 import Footer from "./components/footer/Footer";
-import { Outlet } from "react-router-dom";
+import { Outlet, useOutletContext } from "react-router-dom";
+import Item from "./components/products/item";
+
+type ContextType = {
+  cart: Item[] | null,
+  addToCart: (item: Item) => void
+}
 
 const App: React.FC = () => {
+  const [cart, setCart] = useState<Item[] | null>(null); //TODO: implement the cart logic
+
+  const addToCart = (item: Item) => {
+    // TODO: Have to prevent duplicates
+    setCart((prev) => {
+      const clone = prev ? [...prev] : [];
+      clone.push(item);
+      return clone;
+    })
+
+    console.log(cart);
+  }
   return (
     <div className="app">
       <Navbar />
-      <Outlet />
+      <Outlet context={{ cart, addToCart } satisfies ContextType} />
       <Footer />
     </div>
   );
 };
+
+export function useCart() {
+  return useOutletContext<ContextType>();
+}
 
 export default App;
