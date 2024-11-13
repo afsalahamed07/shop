@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 import Navbar from "./components/navbar/NavBar";
 
 import "./App.css";
@@ -12,23 +12,36 @@ type ContextType = {
   removeFromCart: (item: Item) => void
 }
 
+type CartAction =
+  | { type: "add_to_cart"; item: Item }
+  | { type: "remove_from_cart"; item: Item };
+
 const App: React.FC = () => {
-  const [cart, setCart] = useState<Item[] | null>(null); // TODO: implement the cart logic
+  const [cart, cartDispatch] = useReducer(cartReducer, [] as Item[])
+
+
+  // NOTE: creating a reducer funcciont in here. but can have it different
+  function cartReducer(state: Item[], action: CartAction): Item[] {
+    switch (action.type) {
+      case "add_to_cart": {
+        // TODO: Have to prevent 
+        return state.length > 0 ? [...state, action.item] : [action.item];
+      }
+      case "remove_from_cart": {
+        return state.length > 0 ? state.filter((item) => item.id != action.item.id) : [];
+      }
+    }
+  }
+
 
   const addToCart = (item: Item) => {
-    // TODO: Have to prevent duplicates
-    setCart((prev) => {
-      const clone = prev ? [...prev] : [];
-      clone.push(item);
-      return clone;
-    })
-
+    cartDispatch({ type: "add_to_cart", item: item })
     console.log(cart);
   }
 
-  const removeFromCart = (item: Item) => setCart((prev) =>
-    prev && prev.filter((pItem) => pItem.id != item.id)
-  )
+  const removeFromCart = (item: Item) =>
+    cartDispatch({ type: "remove_from_cart", item: item })
+
 
 
   return (
