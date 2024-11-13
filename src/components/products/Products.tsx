@@ -3,7 +3,6 @@ import Card from "./Card";
 import "./Products.css";
 import { fetchBooks, sanitiseBook } from "../../infra/book-api";
 import Item from "./item";
-import { useOutletContext } from "react-router-dom";
 import { useCart } from "../../App";
 
 // NOTE: here the products means books. might change the name in future

@@ -8,11 +8,12 @@ import Item from "./components/products/item";
 
 type ContextType = {
   cart: Item[] | null,
-  addToCart: (item: Item) => void
+  addToCart: (item: Item) => void,
+  removeFromCart: (item: Item) => void
 }
 
 const App: React.FC = () => {
-  const [cart, setCart] = useState<Item[] | null>(null); //TODO: implement the cart logic
+  const [cart, setCart] = useState<Item[] | null>(null); // TODO: implement the cart logic
 
   const addToCart = (item: Item) => {
     // TODO: Have to prevent duplicates
@@ -24,10 +25,16 @@ const App: React.FC = () => {
 
     console.log(cart);
   }
+
+  const removeFromCart = (item: Item) => setCart((prev) =>
+    prev && prev.filter((pItem) => pItem.id != item.id)
+  )
+
+
   return (
     <div className="app">
       <Navbar />
-      <Outlet context={{ cart, addToCart } satisfies ContextType} />
+      <Outlet context={{ cart, addToCart, removeFromCart } satisfies ContextType} />
       <Footer />
     </div>
   );
