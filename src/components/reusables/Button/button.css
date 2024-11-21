@@ -1,0 +1,8 @@
+.btn {
+  @apply flex;
+
+  button {
+    @apply px-4 py-2 font-river text-lg text-gray-200 bg-teal-500
+        rounded-lg hover:bg-teal-700 transition ease-in-out duration-300;
+  }
+}

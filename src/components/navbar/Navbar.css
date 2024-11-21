@@ -1,14 +1,15 @@
 .navbar {
-    @apply basis-1/12 flex justify-between p-4 text-gray-200 font-river text-2xl
+  @apply basis-1/12 flex justify-between p-4 text-gray-200 font-river text-2xl
     tracking-wide pt-8 px-10;
 
-    li {
-        @apply list-none  px-4 py-2 rounded-lg bg-teal-500
-        transition ease-in-out duration-300 hover:-translate-y-2
-        cursor-pointer hover:bg-teal-700 hover:shadow-md;
-    }
+  /* TODO: get rid of this as well */
+  /*li {*/
+  /*  @apply list-none  px-4 py-2 rounded-lg bg-teal-500*/
+  /*      transition ease-in-out duration-300 hover:-translate-y-2*/
+  /*      cursor-pointer hover:bg-teal-700 hover:shadow-md;*/
+  /*}*/
 
-    .links {
-        @apply flex gap-4;
-    }
+  .links {
+    @apply flex gap-4;
+  }
 }

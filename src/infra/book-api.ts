@@ -5,8 +5,7 @@ type Data = {
   kind: string;
   totalItems: number;
   items: object[];
-}
-
+};
 
 async function fetchBooks() {
   const responnse =
@@ -24,7 +23,7 @@ function sanitiseBook(data: any) {
   }
 
   const items: Item[] = data.items.map((item) => {
-    let sanItem: Item = {} as Item;  // Initialize sanItem to avoid undefined errors
+    let sanItem: Item = {} as Item; // Initialize sanItem to avoid undefined errors
     let volumeInfo = item.volumeInfo || {};
 
     sanItem.id = item.id;
@@ -33,9 +32,10 @@ function sanitiseBook(data: any) {
     sanItem.language = volumeInfo.language || "Unknown Language";
     sanItem.pageCount = volumeInfo.pageCount || 0;
     sanItem.publisher = volumeInfo.publisher || "Unknown Publisher";
-    sanItem.thumbnail = volumeInfo.imageLinks?.thumbnail || "default-thumbnail-url";
-    sanItem.catagories = volumeInfo.categories
-    sanItem.publishedDate = volumeInfo.publishedDate
+    sanItem.thumbnail =
+      volumeInfo.imageLinks?.thumbnail || "default-thumbnail-url";
+    sanItem.catagories = volumeInfo.categories;
+    sanItem.publishedDate = volumeInfo.publishedDate;
 
     return sanItem;
   });
@@ -43,6 +43,5 @@ function sanitiseBook(data: any) {
   console.log(items);
   return items;
 }
-
 
 export { fetchBooks, sanitiseBook };

@@ -1,0 +1,10 @@
+.nav {
+  li {
+    @apply list-none px-4 py-2 rounded-lg  border-teal-500 border-2 text-black
+        transition ease-in-out duration-300 cursor-pointer;
+
+    &:hover {
+      @apply bg-teal-500 -translate-y-2 shadow-md text-white;
+    }
+  }
+}
